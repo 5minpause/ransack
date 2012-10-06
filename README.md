@@ -126,8 +126,8 @@ Given you have these associations ...
 
     class SupervisorsController < ApplicationController
       def index
-        @q = Supervisor.search(params[:q])
-        @supervisors = @q.result(:distinct => true)
+        @search = Supervisor.search(params[:q])
+        @supervisors = @search.result(:distinct => true)
       end
     end
 
